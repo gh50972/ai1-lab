@@ -59,9 +59,6 @@ input[class="date"]{
 input[class="save"]{
     display: none;
 }
-.pasujacy-element {
-    background-color: yellow;
-}
 .highlight {
     background-color: yellow;
 }
