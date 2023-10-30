@@ -1,0 +1,67 @@
+body{
+    background-color: lightcoral;
+}
+header{
+    width: 50%;
+    margin-left: 40%;
+}
+.add{
+    width: 50%;
+    margin-left: 32%;
+}
+.container{
+    background-color: darkmagenta;
+    width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+.lista{
+    border-top: 1px dashed gray;
+    border-bottom: 1px dashed gray;
+    width: 100%;
+
+}
+.day{
+    margin-left: 25%;
+}
+.del{
+    margin-left: 40%;
+    background-color: red;
+    border: 2px solid;
+    border-color:red;
+    border-radius: 8px;
+    color: white;
+}
+.del:hover{
+    background-color: darkred;
+    border-color:darkred;
+}
+.zap{
+    background-color: dodgerblue;
+    border: 2px solid;
+    border-color:dodgerblue;
+    border-radius: 4px;
+    color: white;
+}
+.zap:hover{
+    background-color: blue;
+    border-color:blue;
+}
+.serch{
+    background-image: url("loop.png");
+}
+input[class="poleTekstowe"]{
+    display: none;
+}
+input[class="date"]{
+    display: none;
+}
+input[class="save"]{
+    display: none;
+}
+.pasujacy-element {
+    background-color: yellow;
+}
+.highlight {
+    background-color: yellow;
+}
