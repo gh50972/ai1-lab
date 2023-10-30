@@ -47,9 +47,6 @@ header{
     background-color: blue;
     border-color:blue;
 }
-.serch{
-    background-image: url("loop.png");
-}
 input[class="poleTekstowe"]{
     display: none;
 }
