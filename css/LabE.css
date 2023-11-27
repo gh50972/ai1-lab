@@ -1,0 +1,144 @@
+/* styl1 */
+body{
+    background-color: white;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    background-image: url('deep.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* Styl nagłówka 1*/
+
+h1,h2,h3{
+    color:darkcyan;
+    text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #0fa,
+            0 0 82px #0fa,
+            0 0 92px #0fa,
+            0 0 102px #0fa,
+            0 0 151px #0fa;
+}
+h3{
+    padding-top: 10px;
+}
+/* Styl linków */
+a{
+    color:darkblue;
+}
+a:hover {
+    color: darkgreen;
+}
+/* Styl akapitów */
+p{
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.links{
+    padding-right: 40px;
+}
+.links li{
+    display: inline;
+    padding: 10px;
+}
+li{
+    line-height: 30px;
+}
+/* Styl head */
+.head {
+    list-style: none;
+    text-align: center;
+}
+.links{
+    text-align: center;
+}
+.facts{
+    margin-left: 5%;
+    margin-right: 35%;
+}
+.Whatcan {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('deepdark.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 15px;
+}
+.foot{
+    background-color: black
+}
+/* Styl strony dla ekranów o szerokości mniejszej niż 768px (na przykład telefony komórkowe) */
+@media (max-width: 768px) {
+    .head {
+        text-align: center;
+    }
+
+    .links ul {
+        list-style: none;
+    }
+
+    .links li {
+        display: inline;
+        margin: 0 10px;
+        padding: 0;
+    }
+
+    .facts {
+        padding: 10px;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .Whatcan{
+        padding: 10px;
+
+    }
+}
+@media (max-width: 1440px) {
+    h3{
+        padding-top: 1%;
+    }
+    p{
+        padding-bottom: 1%;
+    }
+    .links{
+        padding-right: 3%;
+    }
+    .links li{
+        padding: 1%;
+    }
+    li{
+        line-height: 130%;
+    }
+    .facts li{
+        margin-bottom: 1%;
+    }
+    .Whatcan {
+        padding: 0 1.5%;
+    }
+}
+@media (max-width: 375px) {
+    h3{
+        padding-top: 1%;
+    }
+    p{
+        padding-bottom: 1%;
+    }
+    .links{
+        padding-right: 10%;
+    }
+    .links li{
+        padding: 1%;
+    }
+    li{
+        line-height: 130%;
+    }
+    .facts{
+        font-size: 115%;
+    }
+    .facts li{
+        margin-bottom: 10%;
+    }
+    .Whatcan {
+        padding: 0 1.5%;
+    }
+}
