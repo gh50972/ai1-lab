@@ -1,0 +1,136 @@
+nowimg1=np.zeros_like(luminacja)
+for i in range(len(mid)):
+    nowimg1[(luminacja>=h[i]) & (luminacja <h[i])]=mid
+plot.subplot(2,2,1)
+plot.imshow(nowimg1,cmap=("gray"))
+plot.subplot(2,2,2)
+plot.imshow(nowimg1)
+plot.show()
+nowimg=luminacja
+rows, columns = nowimg.shape
+
+https://www.youtube.com/shorts/b675YYkUBuA
+
+QxaO82RO
+
+CREATE TABLE Zamowienia_1NF
+(	
+	NumerZam int,
+	NazwaKlienta varchar(100),
+	Adres varchar(100),
+        Miasto varchar(100),
+        Wojewodztwo varchar(100),
+	DataZamowienia date,
+	NazwaProduktu varchar(100),
+        IloscProduktu int(11),
+	CenaProduktu decimal(10,2)
+);
+
+INSERT INTO Zamowienia_1NF(NumerZam, NazwaKlienta, Adres, Miasto, Wojewodztwo, DataZamowienia, NazwaProduktu, IloscProduktu, CenaProduktu)
+VALUES (101,'JanKowalski','ul. Jana Pawła 12, 61-600', 'Poznań', 'Wielkopolskie','2012-01-02','Opony 205 R16', 4, 1200/4),
+(102,'AnnaDymna','ul. Staszica 1, 30-600', 'Kraków', 'Małopolska','2012-03-22','Alufelgi Silver', 4, 2200/4),
+(103,'PiotrWawrzyniak','al. Niepodległości 1, 30-600', 'Kraków', 'Małopolskie','2012-03-22','Alufelgi Silver', 4 , 2200/4),
+(104,'JanKowalski','ul. Jana Pawła 12, 61-600', 'Poznań', 'Wielkopolskie','2012-10-22','Komplet żarówek', 1, 80),
+(105,'JanKowalski','ul. Poznańska 8, 21-120', 'Wrocław', 'Dolnośląskie','2012-05-22','Trójkąt ostrzegawczy', 1, 15/1)
+
+
+CREATE TABLE Zamowienia_2NF
+(	
+	NumerZam int,
+	NumerKlienta int
+);
+INSERT INTO Zamowienia_2NF(NumerZam, NumerKlienta)
+VALUES (101, 1),(102,2),(103,3),(104,1),(105,4)
+CREATE TABLE Klient_2NF
+(
+	NumerKlienta int,
+	NazwaKlienta varchar(100),
+	Adres varchar(100),
+        Miasto varchar(100),
+        Wojewodztwo varchar(100)
+);
+INSERT INTO Klient_2NF(NumerKlienta, NazwaKlienta, Adres, Miasto, Wojewodztwo)
+VALUES (1,'JanKowalski','ul. Jana Pawła 12, 61-600', 'Poznań', 'Wielkopolskie'),
+(2,'AnnaDymna','ul. Staszica 1, 30-600', 'Kraków', 'Małopolska'),
+(3,'PiotrWawrzyniak','al. Niepodległości 1, 30-600', 'Kraków', 'Małopolskie'),
+(1,'JanKowalski','ul. Jana Pawła 12, 61-600', 'Poznań', 'Wielkopolskie'),
+(4,'JanKowalski','ul. Poznańska 8, 21-120', 'Wrocław', 'Dolnośląskie')
+CREATE TABLE DetaleZamowien_2NF
+(
+	NumerZam int,
+	NumerProduktu int,
+	IloscProduktu int(11),
+	CenaProduktu decimal(10,2)
+	DataZamowienia date
+
+);
+INSERT INTO DetaleZamowien_2NF(NumerZam, NumerProduktu, IloscProduktu, DataZamowienia)
+VALUES (101,201,4,'2012-01-02'),
+(102,202,4,'2012-03-22'),
+(103,202,4,'2012-03-22'),
+(104,203,1,'2012-10-22'),
+(105,204,1,'2012-05-22')
+CREATE TABLE Produkty_2NF
+(
+	NumerProduktu int,
+	NazwaProduktu varchar(100),
+	CenaProduktu decimal(10,2)
+);
+INSERT INTO Produkty_2NF(NumerProduktu, NazwaProduktu, CenaProduktu)
+VALUES (201,'Opony 205 R16', 1200/4),
+(202,'Alufelgi Silver', 2200/4),
+(203,'Komplet żarówek', 80),
+(204,'Trójkąt ostrzegawczy', 15/1)
+
+,'2012-01-02','Opony 205 R16', 1200/4),
+'Alufelgi Silver', 2200/4),
+'Alufelgi Silver', 2200/4),
+'Komplet żarówek', 80),
+'Trójkąt ostrzegawczy', 15/1)
+	NumerKlienta int,
+	NazwaKlienta varchar(100),
+	NazwiskoKlienta varchar(100),
+	Adres varchar(100),
+        Miasto varchar(100),
+        Wojewodztwo varchar(100),
+);
+
+CREATE TABLE Klient_3NF
+(
+	NumerKlienta int,
+	NazwaKlienta varchar(100),
+	Adres varchar(100),
+        MiastoId int,
+        WojewodztwoId int
+);
+INSERT INTO Klient_3NF(NumerKlienta, NazwaKlienta, Adres, MiastoId , WojewodztwoId)
+VALUES (1,'JanKowalski','ul. Jana Pawła 12, 61-600', 1, 1), //poznań wielkopolskie
+(2,'AnnaDymna','ul. Staszica 1, 30-600', 2, 2), //kraków małopolskie
+(3,'PiotrWawrzyniak','al. Niepodległości 1, 30-600', 2, 2), //kraków małopolskie
+(4,'JanKowalski','ul. Poznańska 8, 21-120', 3, 3); //wrocław dolnośląskie
+
+CREATE TABLE Miasta_3NF
+(
+        MiastoId int,
+        NazwaMiasta varchar(100)
+);
+
+INSERT INTO Miasta_3NF(MiastoId, NazwaMiasta)
+VALUES (1,'Poznań'),(2,'Kraków'),(3,'Wrocław');
+
+
+CREATE TABLE Wojewodztwa_3NF
+(
+        WojewodztwoId int,
+        NazwaWojewodztwa varchar(100)
+);
+
+INSERT INTO Wojewodztwa_3NF(WojewodztwoId , NazwaWojewodztwa)
+VALUES (1,'Wielkopolskie'),
+(2,'Małopolska'),
+(3,'Dolnośląskie');
+
+
+ALTER TABLE `Klient_3NF` ADD CONSTRAINT FOREIGN KEY (`WojewodztwoId`) REFERENCES ` Wojewodztwa_3NF`(`WojewodztwoId`);
+
+ALTER TABLE `Klient_3NF` ADD CONSTRAINT FOREIGN KEY (`MiastoId`) REFERENCES ` Miasta_3NF`(`MiastoId`);
