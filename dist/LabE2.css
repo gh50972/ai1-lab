@@ -1,0 +1,147 @@
+/* styl1 */
+body{
+    color: black;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    background-image: url(images/2.jpg?eb819cbc5bc57a75af8a64043552b7d2);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+/* Styl nagłówka 1*/
+h1,h2,h3{
+    color:lightblue;
+}
+h1{
+    padding-top: 5px;
+}
+/* Styl nagłówka 2*/
+h2{
+    padding-left: 10px;
+}
+/* Styl nagłówka 3*/
+h3{
+
+}
+a:hover {
+    color: #FFA500;
+}
+/* Styl akapitów */
+p{
+    font-size: larger;
+}
+li{
+    text-align: left;
+    margin-right:10%;
+    line-height: 25px;
+}
+/* Styl head */
+.head {
+    list-style: none;
+    background-image: url(images/wood3.jpg?e5232560b5eff3bbd011ff24611a8c89);
+    background-size: cover;
+}
+.facts{
+    background-image: url(images/paper.jpg?da1730c13241f93687e8c8776e5f4a94);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.Whatcan{
+    background-color: rgba(2, 34, 93, 0.7) ;
+    align-items: center;
+    display: flex;
+}
+.deepjpg{
+    text-align: right;
+    flex: 1;
+    background-image: url(images/deepo.jpg?cdb1f90db6b93818679eb6d20d4e403c);
+    background-size: 200px 300px;
+    background-repeat: no-repeat;
+    padding: 12.5%;
+}
+.deeptext{
+    padding:0 15px;
+}
+.foot{
+    background-color: white;
+}
+
+/* Styl strony dla ekranów o szerokości mniejszej niż 768px (na przykład telefony komórkowe) */
+@media (max-width: 768px) {
+    .head {
+        text-align: center;
+    }
+
+    .links ul {
+        list-style: none;
+    }
+
+    .links li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    .facts {
+        padding: 10px;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .Whatcan{
+        padding: 10px;
+
+    }
+    .deepjpg{
+        padding: 0;
+    }
+}
+@media (max-width: 1440px) {
+    h1{
+        padding-top: 0.5%;
+    }
+    /* Styl nagłówka 2*/
+    h2{
+        padding-left: 1%;
+        padding-top: 0.2%;
+    }
+    li{
+        font-size: 125%;
+        margin-right:10%;
+        line-height: 140%;
+    }
+    .deepjpg{
+        background-size: 100% 100%;
+        padding: 12.5%;
+    }
+    .deeptext{
+        padding:0 1.5%;
+    }
+
+}
+@media (max-width: 375px) {
+    h1{
+        padding-top: 2%;
+    }
+    /* Styl nagłówka 2*/
+    h2{
+        padding-left: 0;
+    }
+    li{
+        font-size: 125%;
+        margin-right:10%;
+        line-height: 140%;
+        margin-bottom: 5%;
+    }
+    .deepjpg{
+        padding: 0;
+    }
+    .deeptext{
+        padding:0 1.5%;
+    }
+    .links{
+        padding-right: 10%;
+    }
+}
