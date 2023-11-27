@@ -14,6 +14,15 @@ var msg = "Hello!";
 alert(msg);
 document.addEventListener('DOMContentLoaded', function () {
   var linkArea = document.getElementById('linkArea');
+  var stylesheet = document.createElement('link');
+  stylesheet.rel = 'stylesheet';
+  stylesheet.href = "dist/LabE.css";
+  stylesheet.disabled = true;
+  document.head.appendChild(stylesheet);
+  var stylesheet2 = document.createElement('link');
+  stylesheet2.rel = 'stylesheet';
+  stylesheet2.href = "dist/LabE2.css";
+  document.head.appendChild(stylesheet2);
   if (linkArea) {
     var linksData = [{
       text: 'Link 1',

@@ -3,7 +3,17 @@ alert(msg);
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
     const linkArea = document.getElementById('linkArea');
+    const stylesheet = document.createElement('link');
+    stylesheet.rel = 'stylesheet';
+    stylesheet.href = "dist/LabE.css";
+    stylesheet.disabled=true;
+    document.head.appendChild(stylesheet);
+    const stylesheet2 = document.createElement('link');
+    stylesheet2.rel = 'stylesheet';
+    stylesheet2.href = "dist/LabE2.css";
+    document.head.appendChild(stylesheet2);
 
     if (linkArea) {
         const linksData = [
